@@ -16,6 +16,7 @@ $(function() {
         it('have names defined', function() {
             for (i = 0; i < allFeeds.length; i++) {
                 expect(allFeeds[i].name).toBeDefined();
+                expect(allFeeds[i].name).toBeTruthy();
             }
         });
     });
@@ -41,8 +42,8 @@ $(function() {
         });
 
         it('have at least a single ".entry" element within the ".feed" container', function(done) {
-              expect($('.feed .entry').length).toBeGreaterThan(0);
-              done();
+            expect($('.feed .entry').length).toBeGreaterThan(0);
+            done();
         });
     });
 
